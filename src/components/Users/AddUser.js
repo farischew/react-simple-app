@@ -14,10 +14,9 @@ const AddUser = (props) => {
       return;
     }
     if (+enteredAge < 1) {
-      console.log("Age Invalid");
+      return;
     }
-    console.log(enteredUsername);
-    console.log(enteredAge);
+    props.onAddUser(enteredUsername, enteredAge);
     setEnteredUsername("");
     setEnteredAge("");
   };
